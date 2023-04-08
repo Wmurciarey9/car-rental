@@ -1,0 +1,80 @@
+.navbar {
+  translate: 0 0px;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  z-index: 999;
+
+  .visible {
+    top: 0;
+    translate: 0;
+  }
+
+  .container {
+    display: flex;
+    margin: 10px 25px;
+    font-weight: 700;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 20px;
+      font-size: 17px;
+      &:hover {
+        background-color: #f7f9fc;
+        color: #1463ff;
+      }
+    }
+
+    .left {
+      display: flex;
+      height: 100px;
+      flex: 1;
+      .logo {
+        cursor: pointer;
+      }
+    }
+    .middle {
+      flex: 2;
+      justify-content: space-around;
+      display: flex;
+      align-items: center;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      flex: 1;
+      gap: 20px;
+
+      button {
+        background-color: #1463ff;
+        padding: 10px 15px;
+        color: white;
+        font-size: 20px;
+        border: none;
+        &:hover {
+          background-color: #143fff;
+        }
+      }
+      .blueButton {
+        box-shadow: 0 10px 15px 0 rgba(48, 141, 255, 0.35);
+        &:hover {
+          box-shadow: 0 10px 15px 5px rgba(48, 141, 255, 0.35);
+        }
+      }
+    }
+  }
+}

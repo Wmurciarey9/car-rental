@@ -1,0 +1,78 @@
+.rentNow {
+  margin: 100px 0;
+  .containerBox {
+    padding: 20px;
+
+    border-radius: 5px;
+    .rentalBox {
+      box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.467);
+      padding: 4rem 4.5rem 5rem 5.5rem;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background-color: #ffffff;
+      background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 2.7rem;
+      }
+
+      .box-form {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+      }
+      .box-data {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          font-weight: 600;
+          margin-bottom: 1.2rem;
+          display: flex;
+          gap: 20px;
+
+          i,
+          b {
+            color: #1463ff;
+          }
+        }
+
+        select {
+          font-weight: 400;
+          outline: 0;
+          border-radius: 3px;
+          border: 1px solid #ccd7e6;
+          padding: 1.2rem 1.3rem;
+        }
+
+        input {
+          outline: none;
+          border: 1px solid #ccd7e6;
+          padding-right: 3rem;
+          padding: 1.2rem 1.3rem;
+        }
+      }
+      button {
+        align-self: self-end;
+        background-color: #1463ff;
+        border: none;
+        box-shadow: 0 10px 15px rgba(48, 131, 255, 0.35);
+        color: #fff;
+        cursor: pointer;
+        font-family: Rubik, sans-serif;
+        font-size: 1.8rem;
+        font-weight: 500;
+        height: -moz-fit-content;
+        height: -webkit-fit-content;
+        height: fit-content;
+        padding: 1.3rem;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
