@@ -1,3 +1,5 @@
+@import "../../breakpoints/breakpoints.scss";
+
 .navbar {
   translate: 0 0px;
   position: fixed;
@@ -15,17 +17,35 @@
   box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
   z-index: 999;
 
+  @include media("<=phone") {
+    display: flex;
+    width: 100%;
+    translate: none;
+    // height: 40px;
+  }
+
   .visible {
     top: 0;
     translate: 0;
   }
 
-  .container {
+  .container-fluid {
     display: flex;
     padding: 10px 25px;
     font-weight: 700;
     width: 100%;
+    @include media("<=phone") {
+      padding: 0;
+    }
 
+    .navbar-toggler {
+      background-color: rgba(255, 255, 255, 0.445);
+      margin-right: 20px;
+      padding: 5px;
+    }
+    .navbar-toggler-icon {
+      scale: 0.8;
+    }
     a {
       text-decoration: none;
       color: white;
@@ -38,43 +58,68 @@
       }
     }
 
-    .left {
-      display: flex;
-      height: 100px;
-      flex: 1;
-      .logo {
-        cursor: pointer;
+    .logo {
+      cursor: pointer;
+      width: 20%;
+
+      @include media("<=phone") {
+        width: 30%;
+        height: 30%;
       }
     }
-    .middle {
-      flex: 2;
+    .collapse {
+      margin: 0 20px;
       justify-content: space-around;
-      display: flex;
-      align-items: center;
-    }
-    .right {
-      display: flex;
-      align-items: center;
-      justify-content: end;
-      flex: 1;
-      gap: 20px;
+      @include media("<=phone") {
+        margin: 20px 0;
+      }
 
-      button {
-        background-color: #1463ff;
-        padding: 10px 15px;
-        color: white;
-        font-size: 20px;
-        border: none;
-        &:hover {
-          background-color: #143fff;
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include media("<=phone") {
+          margin-left: 0;
         }
       }
-      .blueButton {
-        box-shadow: 0 10px 15px 0 rgba(48, 141, 255, 0.35);
-        &:hover {
-          box-shadow: 0 10px 15px 5px rgba(48, 141, 255, 0.35);
+
+      .buttons {
+        justify-content: space-around;
+        display: flex;
+        margin-left: 90px;
+        gap: 40px;
+        align-items: center;
+
+        @include media("<=phone") {
+          margin-left: 0;
+        }
+
+        button {
+          background-color: #1463ff;
+          padding: 10px 15px;
+          color: white;
+          font-size: 20px;
+          border: none;
+
+          &:hover {
+            background-color: #143fff;
+          }
+
+          @include media("<=phone") {
+            margin-left: 0;
+          }
+        }
+
+        .blueButton {
+          box-shadow: 0 10px 15px 0 rgba(48, 141, 255, 0.35);
+          &:hover {
+            box-shadow: 0 10px 15px 5px rgba(48, 141, 255, 0.35);
+          }
         }
       }
     }
   }
+
+  // RESPONSIVE DESIGN
+  // BREAKPOINTS
 }

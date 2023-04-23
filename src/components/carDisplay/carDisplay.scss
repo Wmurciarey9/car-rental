@@ -1,8 +1,11 @@
+@import "../../breakpoints/breakpoints.scss";
+
 .carDisplay {
   display: flex;
   flex-direction: column;
   width: 100%;
   align-items: center;
+
   .carSection {
     overflow: hidden;
     min-height: 800px;
@@ -13,10 +16,18 @@
     flex-direction: column;
     position: relative;
     box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.467);
+
+    @include media("<=phone") {
+      height: 1100px;
+    }
     img {
       width: 70%;
       margin-top: 150px;
       z-index: 2;
+      @include media("<=phone") {
+        margin-top: 100px;
+        width: 100%;
+      }
     }
 
     .columns {
@@ -25,9 +36,15 @@
       display: flex;
       height: 100%;
       width: 100%;
+      @include media("<=phone") {
+        flex-direction: column;
+      }
 
       h1 {
         font-size: 30px;
+        @include media("<=phone") {
+          font-size: 25px;
+        }
       }
       .left {
         justify-content: space-around;
@@ -35,24 +52,23 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        align-items: center;
         background: rgb(210, 231, 251);
         background: linear-gradient(
           90deg,
           rgba(210, 231, 251, 1) 0%,
           rgba(255, 255, 255, 1) 100%
         );
-
-        // (USE THIS FOR DARK TEHEM)
-        //    {
-
-        // background: rgb(0, 0, 0);
-        // background: linear-gradient(
-        //   90deg,
-        //   rgba(0, 0, 0, 1) 0%,
-        //   rgba(48, 55, 62, 1) 100%
-        // );
-        // }
-        align-items: center;
+        @include media("<=phone") {
+          padding-top: 300px;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(210, 231, 251, 1) 100%
+          );
+          text-align: center;
+        }
 
         .leftComponent {
           width: 60%;
@@ -70,6 +86,8 @@
         display: flex;
         flex-direction: column;
         flex: 2;
+        align-items: center;
+        padding: 0px 0;
         background: rgb(255, 255, 255);
         background: linear-gradient(
           90deg,
@@ -77,20 +95,26 @@
           rgba(210, 231, 251, 1) 100%
         );
 
-        // background: rgb(48, 55, 62);
-        // background: linear-gradient(
-        //   90deg,
-        //   rgba(48, 55, 62, 1) 0%,
-        //   rgba(0, 0, 0, 1) 100%
-        // );
-        align-items: center;
-        padding: 0px 0;
+        @include media("<=phone") {
+          background: rgb(210, 231, 251);
+          background: linear-gradient(
+            180deg,
+            rgba(210, 231, 251, 1) 0%,
+            rgba(255, 255, 255, 1) 100%
+          );
+          position: absolute;
+          justify-content: center;
+          width: 100%;
+        }
 
         h1 {
           margin-top: 40px;
           font-size: 60px;
           display: flex;
           text-align: center;
+          @include media("<=phone") {
+            font-size: 30px;
+          }
         }
         button {
           position: absolute;
@@ -105,6 +129,11 @@
           cursor: pointer;
           z-index: 4;
           box-shadow: 0 10px 15px 0 rgba(48, 141, 255, 0.35);
+          @include media("<=phone") {
+            top: 650px;
+            height: 50px;
+          }
+
           &:hover {
             background-color: #143fff;
             box-shadow: 0 10px 15px 5px rgba(48, 141, 255, 0.35);
@@ -120,10 +149,25 @@
         align-items: center;
         justify-content: space-around;
         padding: 70px 0;
+        @include media("<=phone") {
+          height: 50px;
+          background: rgb(210, 231, 251);
+          background: linear-gradient(
+            180deg,
+            rgba(210, 231, 251, 1) 50%,
+            rgba(255, 255, 255, 1) 100%
+          );
+        }
 
         .iconSet {
           width: 40%;
           padding-left: 70px;
+
+          @include media("<=phone") {
+            width: 55%;
+            padding-left: 0;
+          }
+
           i {
             margin-right: 10px;
           }

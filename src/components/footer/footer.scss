@@ -1,9 +1,25 @@
+@import "../../breakpoints/breakpoints.scss";
+
 .footer {
   display: flex;
   color: black;
   background-color: whitesmoke;
   font-weight: 600;
   padding: 50px 0;
+  @include media("<=phone") {
+    flex-direction: column;
+  }
+
+  h1 {
+    @include media("<=phone") {
+      font-weight: 700;
+    }
+  }
+  h2 {
+    @include media("<=phone") {
+      font-weight: 700;
+    }
+  }
 
   .left {
     flex: 1;

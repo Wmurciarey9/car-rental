@@ -1,3 +1,5 @@
+@import "../../breakpoints/breakpoints.scss";
+
 .intro {
   display: flex;
   position: relative;
@@ -7,6 +9,12 @@
 
   img {
     width: 100%;
+
+    @include media("<=phone") {
+      width: 150%;
+      overflow: hidden;
+      padding-bottom: 700px;
+    }
   }
   .text {
     display: flex;
@@ -16,6 +24,18 @@
     top: 300px;
     font-weight: 700;
     width: 50%;
+
+    @include media("<=phone") {
+      top: 100px;
+      width: 80%;
+    }
+    h1 {
+      @include media("<=phone") {
+        padding-top: 250px;
+        font-weight: 800;
+      }
+    }
+
     span {
       color: #1463ff;
       font-weight: 700;
@@ -34,8 +54,11 @@
     .buttons {
       margin-top: 30px;
       display: flex;
-
       gap: 20px;
+      @include media("<=phone") {
+        flex-direction: column;
+        width: 100%;
+      }
 
       button {
         background-color: #1463ff;

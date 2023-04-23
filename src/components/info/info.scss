@@ -1,3 +1,4 @@
+@import "../../breakpoints/breakpoints.scss";
 .info {
   display: flex;
   align-items: center;
@@ -7,13 +8,27 @@
   margin-bottom: 100px;
 
   h2 {
+    @include media("<=phone") {
+      font-weight: 700;
+    }
   }
   h1 {
+    @include media("<=phone") {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin: 10px;
+      align-items: center;
+      text-align: center;
+    }
   }
   .infoSection {
     margin: 50px;
     display: flex;
     gap: 10px;
+
+    @include media("<=phone") {
+      flex-direction: column;
+    }
 
     text-align: center;
     .itemSection {
@@ -21,6 +36,9 @@
       align-items: center;
       flex-direction: column;
       gap: 20px;
+      @include media("<=phone") {
+        margin-bottom: 30px;
+      }
       .imgSection {
         display: flex;
         i {
