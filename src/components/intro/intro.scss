@@ -20,6 +20,11 @@
       overflow: hidden;
       padding-bottom: 140%;
     }
+    @include media(">=425px", "<=tablet") {
+      width: 150%;
+      overflow: hidden;
+      padding-bottom: 140%;
+    }
   }
   .text {
     display: flex;
@@ -38,12 +43,20 @@
       top: 15%;
       width: 80%;
     }
+    @include media(">=425px", "<=tablet") {
+      top: 15%;
+      width: 80%;
+    }
     h1 {
       @include media("<=phone") {
         padding-top: 250px;
         font-weight: 800;
       }
       @include media(">=phone", "<=425px") {
+        padding-top: 110%;
+        font-weight: 800;
+      }
+      @include media(">=425px", "<=tablet") {
         padding-top: 110%;
         font-weight: 800;
       }
