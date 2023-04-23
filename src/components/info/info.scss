@@ -8,12 +8,12 @@
   margin-bottom: 100px;
 
   h2 {
-    @include media("<=phone") {
+    @include media("<=tablet") {
       font-weight: 700;
     }
   }
   h1 {
-    @include media("<=phone") {
+    @include media("<=tablet") {
       font-weight: 700;
       font-size: 2.5rem;
       margin: 10px;
@@ -26,7 +26,7 @@
     display: flex;
     gap: 10px;
 
-    @include media("<=phone") {
+    @include media("<=tablet") {
       flex-direction: column;
     }
 
@@ -36,7 +36,7 @@
       align-items: center;
       flex-direction: column;
       gap: 20px;
-      @include media("<=phone") {
+      @include media("<=tablet") {
         margin-bottom: 30px;
       }
       .imgSection {

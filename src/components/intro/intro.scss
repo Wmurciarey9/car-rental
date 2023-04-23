@@ -15,6 +15,11 @@
       overflow: hidden;
       padding-bottom: 700px;
     }
+    @include media(">=phone", "<=425px") {
+      width: 150%;
+      overflow: hidden;
+      padding-bottom: 140%;
+    }
   }
   .text {
     display: flex;
@@ -29,9 +34,17 @@
       top: 100px;
       width: 80%;
     }
+    @include media(">=phone", "<=425px") {
+      top: 15%;
+      width: 80%;
+    }
     h1 {
       @include media("<=phone") {
         padding-top: 250px;
+        font-weight: 800;
+      }
+      @include media(">=phone", "<=425px") {
+        padding-top: 110%;
         font-weight: 800;
       }
     }
@@ -55,7 +68,7 @@
       margin-top: 30px;
       display: flex;
       gap: 20px;
-      @include media("<=phone") {
+      @include media("<=tablet") {
         flex-direction: column;
         width: 100%;
       }

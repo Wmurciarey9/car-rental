@@ -9,14 +9,23 @@
   @include media("<=phone") {
     flex-direction: column;
   }
+  @include media(">=phone", "<=425px") {
+    flex-direction: column;
+  }
 
   h1 {
     @include media("<=phone") {
       font-weight: 700;
     }
+    @include media(">=phone", "<=425px") {
+      font-weight: 700;
+    }
   }
   h2 {
     @include media("<=phone") {
+      font-weight: 700;
+    }
+    @include media(">=phone", "<=425px") {
       font-weight: 700;
     }
   }
